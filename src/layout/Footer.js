@@ -1,26 +1,30 @@
 import React from 'react';
 const Footer = () => {
     return (
-        <footer className="sticky-footer">
-        <div className="container">
-           <div className="row no-gutters">
-              <div className="col-lg-6 col-sm-6">
-                 <p>
-                    Copyright &copy;
-                    <script>
-                       document.write(new Date().getFullYear());
-                    </script> All Rights Reserved | Knowledge App
-                 </p>
+      <section class="footer-area">
+      <footer class="container">
+          <div class="row">
+              <div class="col-sm-8">
+                  <p>
+                      Copyright &copy;
+                      <script>
+                          document.write(new Date().getFullYear());
+                      </script> All Rights Reserved | Knowledge App
+                  </p>
               </div>
-              <div className="col-lg-6 col-sm-6 text-right">
-                 <div className="app">
-                    <a href="#"><img alt="" src="img/google.png"/></a>
-                    <a href="#"><img alt="" src="img/apple.png"/></a>
-                 </div>
+              <div class="col-sm-4">
+                  <form class="form-inline">
+                      <input class="form-control mr-sm-2" type="newsletter" placeholder="Enter your email"
+                          aria-label="Search"/>
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Subscribe</button>
+                  </form>
               </div>
-           </div>
-        </div>
-     </footer>
+
+
+          </div>
+
+      </footer>
+  </section>
 
         
 )

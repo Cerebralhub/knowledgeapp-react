@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar = () => {
 return (
-   <body id="page-top">
+   <>
       <nav className="navbar navbar-expand navbar-light bg-white static-top osahan-nav sticky-top">
       &nbsp;&nbsp;
       <button className="btn btn-link btn-sm text-secondary order-1 order-sm-0" id="sidebarToggle">
@@ -46,7 +46,7 @@ return (
          </li>
       </ul>
    </nav>
-   </body>
+   </>
 
 
 

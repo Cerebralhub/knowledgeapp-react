@@ -40,13 +40,14 @@ li.multipleInput-email {
 .multipleInput-close {
     width:16px;
     height:16px;
-    background:url(close.png);
+    /* background:url(close.png); */
     display:block;
     float:right;
     margin:0 3px;
 }
 
-input.error {
+
+/* .input.error { 
 	border: 1px solid red;
   }
   
@@ -54,4 +55,27 @@ input.error {
 	color: red;
 	font-size: 0.75em;
 	display: relative;
-  }
+  } */
+
+.mx-1{
+    margin-right: 10px;
+}
+
+.my-nav{
+    padding: 10px;
+    margin-bottom: 260px;
+    
+}
+.navbar-nav{
+    padding-left: 50px;
+}
+
+.nav-item{
+    padding-right: 50px;
+}
+
+.welcome{
+   margin-bottom: 20px;
+   font-size: 60px;
+}
+
