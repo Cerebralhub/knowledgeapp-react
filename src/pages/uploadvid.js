@@ -10,6 +10,7 @@ export default class componentName extends Component {
  <Navbar/>
     <Sidebar/>
     <div id="content-wrapper">
+       {/* dfsh;gdf */}
          <div class="container-fluid upload-details">
             <div class="row">
                <div class="col-lg-12">
