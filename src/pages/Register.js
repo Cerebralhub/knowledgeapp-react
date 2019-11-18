@@ -1,10 +1,108 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-import LOGO from '../img/favicon.png'
+import LOGO from '../img/favicon.png';
+
+const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
+
+const formValid =  ({ formErrors, ...rest }) => {
+  let valid = true;
+
+  // validate form errors being empty
+  Object.values(formErrors).forEach( val => { 
+    val.length > 0 && (valid = false)
+  });
+
+  // validate the form was filled out
+  Object.values(rest).forEach(val => {
+    val === null && (valid = false)
+  });
+
+  return valid;
+}
 
  class Register extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      firstName: null,
+      lastName: null,
+      email: null,
+      formErrors: {
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        confirm_password: ""
+      }
+    };
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    
+
+    if (formValid(this.state)) {
+      alert(`
+         --SUBMITTING--
+         First Name: ${this.state.firstName}
+         Last Name: ${this.state.lastName}
+         email: ${this.state.email}
+         password: ${this.state.password}
+        confirm_password ${this.state.confirm_password}
+      `);
+      const { password, confirm_password } = this.state
+      if (password !== confirm_password) {
+          alert("Passwords don't match");
+   }
+    } else {
+      alert("FORM INVALID - DISPLAY ERROR MESSAGE");
+    }
+  }; 
+
+  handleChange = e => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    let formErrors = this.state.formErrors;
+
+    switch (name) {
+      case "firstName":
+        formErrors.firstName =
+         value.length < 3  
+         ? "mininum 3 characters required"
+        : "";
+        break;
+        case "lastName":
+            formErrors.lastName =
+             value.length < 3  
+             ?"mininum 3 characters required"
+            : "";
+        break;
+        
+        case "email":
+            formErrors.email =
+            emailRegex.test(value)  
+            ?""
+            : "invalid email address"
+        break;
+
+        case "password":
+           formErrors.password =
+           value.length < 6  
+            ?"mininum 6 characters required"
+           : "";
+        break;
+        
+        default:
+          break;
+    }
+    this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+  };
+  
+
   render() {
+    const { formErrors } = this.state;
     return (
       <div className="login-main-body">
         <section className="login-main-wrapper">
@@ -17,26 +115,63 @@ import LOGO from '../img/favicon.png'
                   <h5 className="mt-3 mb-3">Welcome to the Knowledge App</h5>
                   <p>Fill this form to Sign-up <br />and start watching</p>
                 </div>
-                <form action="#">
+                <form onSubmit={this.handleSubmit} noValidate>
                   <div className="form-group">
                     <label>First Name</label>
-                    <input type="text" className="form-control" placeholder="First Name" />
+                    <input type="text" placeholder="First Name" 
+                     name="firstName"
+                     noValidate
+                     className={`form-control ${formErrors.firstName.length > 0 ? "error" : null}`}
+                     onChange={this.handleChange}
+                    />
+                     {formErrors.firstName.length > 0 && (
+                   <span className="errorMessage">{formErrors.firstName}</span>
+                    )}
                   </div>
                   <div className="form-group">
                     <label>Lat Name</label>
-                    <input type="text" className="form-control" placeholder="Last Name" />
+                    <input type="text" placeholder="Last Name" 
+                    name="lastName" 
+                    noValidate
+                    className={`form-control ${formErrors.lastName.length > 0 ? "error" : null}`} 
+                    onChange={this.handleChange}
+                    />
+                    {formErrors.lastName.length > 0 && (
+                     <span className="errorMessage">{formErrors.lastName}</span>
+                   )}
                   </div>
                   <div className="form-group">
                     <label>Email address</label>
-                    <input type="email" className="form-control" placeholder="Enter your email address" />
+                    <input type="email" className="form-control" placeholder="Enter your email address"
+                    name="email" 
+                    noValidate
+                    onChange={this.handleChange}
+                    />
+                     {formErrors.email.length > 0 && (
+                       <span className="errorMessage">{formErrors.email}</span>
+                    )}
                   </div>
                   <div className="form-group">
                     <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Password" />
+                    <input type="password" className="form-control" placeholder="Password" 
+                     name="password" 
+                     noValidate
+                     onChange={this.handleChange}
+                    />
+                    {formErrors.password.length > 0 && (
+                     <span className="errorMessage">{formErrors.password}</span>
+                    )}
                   </div>
                   <div className="form-group">
                     <label>Confirm Password</label>
-                    <input type="password" className="form-control" placeholder="Confirm Password" />
+                    <input type="password" className="form-control" placeholder="Confirm Password" 
+                     name="confirm_password" 
+                     noValidate
+                     onChange={this.handleChange}
+                    />
+                    {formErrors.confirm_password.length > 0 && (
+                      <span className="errorMessage">{formErrors.confirm_password}</span>
+                    )}
                   </div>
                   <div className="mt-4">
                     <button type="submit" className="btn btn-outline-primary btn-block btn-lg">Sign Up</button>

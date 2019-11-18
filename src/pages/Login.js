@@ -1,10 +1,90 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-import LOGO from '../img/favicon.png'
+
+import LOGO from '../img/favicon.png';
+
+const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
+
+const formValid =  ({ formErrors, ...rest }) => {
+  let valid = true;
+
+  // validate form errors being empty
+  Object.values(formErrors).forEach( val => { 
+    val.length > 0 && (valid = false)
+  });
+
+  // validate the form was filled out
+  Object.values(rest).forEach(val => {
+    val === null && (valid = false)
+  });
+
+  return valid;
+}
 
 export default class componentName extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      
+      email: null,
+      formErrors: {
+       
+        email: "",
+        password: "",
+        
+      }
+    };
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    
+
+    if (formValid(this.state)) {
+      alert(`
+         --SUBMITTING--
+         email: ${this.state.email}
+         password: ${this.state.password}
+      
+      `);
+    
+    } else {
+      alert("FORM INVALID - DISPLAY ERROR MESSAGE");
+    }
+  }; 
+
+  handleChange = e => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    let formErrors = this.state.formErrors;
+
+    switch (name) {
+        
+        case "email":
+            formErrors.email =
+            emailRegex.test(value)  
+            ?""
+            : "invalid email address"
+        break;
+
+        case "password":
+           formErrors.password =
+           value.length < 6  
+            ?"mininum 6 characters required"
+           : "";
+        break;
+        
+        default:
+          break;
+    }
+    this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+  };
+  
+
   render() {
+    const { formErrors } = this.state;
     return (
       <div className="login-main-body">
          <section className="login-main-wrapper">
@@ -17,14 +97,28 @@ export default class componentName extends Component {
                   <h5 className="mt-3 mb-3">Welcome to the Knowledge App</h5>
                   <p>Fill this form to login <br />and start watching.</p>
                 </div>
-                <form action="https://askbootstrap.com/preview/vidoe-v1-1/index.html">
+                <form onSubmit={this.handleSubmit} noValidate>
                   <div className="form-group">
                     <label>Email address</label>
-                    <input type="email" className="form-control" placeholder="Enter your email address" />
+                    <input type="email" className="form-control" placeholder="Enter your email address" 
+                     name="email" 
+                     noValidate
+                     onChange={this.handleChange}
+                     />
+                      {formErrors.email.length > 0 && (
+                        <span className="errorMessage">{formErrors.email}</span>
+                     )}
                   </div>
                   <div className="form-group">
                     <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Password" />
+                    <input type="password" className="form-control" placeholder="Password" 
+                    name="password" 
+                    noValidate
+                    onChange={this.handleChange}
+                   />
+                   {formErrors.password.length > 0 && (
+                    <span className="errorMessage">{formErrors.password}</span>
+                   )}
                   </div>
                   <div className="mt-4">
                     <div className="row">
