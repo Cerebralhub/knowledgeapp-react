@@ -274,7 +274,7 @@ export default class componentName extends Component {
             </div>
     <Footer/>
     </div>
-    </div>
+    </div> 
   
     
 
