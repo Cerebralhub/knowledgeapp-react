@@ -11,10 +11,10 @@ export default class componentName extends Component {
     <Sidebar/>
       <ul class="sidebar navbar-nav">
          <li class="nav-item active">
-            <a class="nav-link" href="index.html">
+            <Link class="nav-link" to="index.html">
                <i class="fas fa-fw fa-home"></i>
                <span>Home</span>
-            </a>
+            </Link>
          </li>
          <li class="nav-item">
             <a class="nav-link" href="channels.html">

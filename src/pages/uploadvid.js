@@ -26,10 +26,10 @@ export default class componentName extends Component {
                   <div class="osahan-progress">
                      <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                           aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                           aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style={{width: '75%'}}></div>
                      </div>
                      <div class="osahan-close">
-                        <a href="#"><i class="fas fa-times-circle"></i></a>
+                        <Link to="#"><i class="fas fa-times-circle"></i></Link>
                      </div>
                   </div>
                   <div class="osahan-desc">Your Video is still uploading, please keep this page open until it's done.

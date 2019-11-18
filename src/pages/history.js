@@ -16,13 +16,13 @@ export default class componentName extends Component {
                      <div class="col-md-12">
                         <div class="main-title">
                            <div class="btn-group float-right right-action">
-                              <a href="#" class="right-action-link text-gray" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <Link to="#" class="right-action-link text-gray" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               Sort by <i class="fa fa-caret-down" aria-hidden="true"></i>
-                              </a>
+                              </Link>
                               <div class="dropdown-menu dropdown-menu-right">
-                                 <a class="dropdown-item" href="#"><i class="fas fa-fw fa-star"></i> &nbsp; Top Rated</a>
-                                 <a class="dropdown-item" href="#"><i class="fas fa-fw fa-signal"></i> &nbsp; Viewed</a>
-                                 <a class="dropdown-item" href="#"><i class="fas fa-fw fa-times-circle"></i> &nbsp; Close</a>
+                                 <Link class="dropdown-item" to="#"><i class="fas fa-fw fa-star"></i> &nbsp; Top Rated</Link>
+                                 <Link class="dropdown-item" to="#"><i class="fas fa-fw fa-signal"></i> &nbsp; Viewed</Link>
+                                 <Link class="dropdown-item" to="#"><i class="fas fa-fw fa-times-circle"></i> &nbsp; Close</Link>
                               </div>
                            </div>
                            <h6>Watch History</h6>
