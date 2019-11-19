@@ -1,33 +1,38 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import {FaHome,FaHistory,FaUsers,FaList} from 'react-icons/fa';
-
-const Sidebar = () => {
+import { Link } from 'react-router-dom'
+const EduSidebar = () => {
     return (
         <ul className="sidebar navbar-nav">
         <li className="nav-item active">
            <Link className="nav-link" to="/Landing">
-             <FaHome/>
+              <i className="fas fa-fw fa-home"></i>
               <span>Home</span>
            </Link>
         </li>
         <li className="nav-item">
            <Link className="nav-link" to="/channels">
-           <FaUsers/>
+              <i className="fas fa-fw fa-users"></i>
               <span>Channels</span>
            </Link>
         </li>
-       
+      
         <li className="nav-item">
-           <Link className="nav-link" to="/history">
-           <FaHistory/>
+           <Link className="nav-link" to="upload-video.html">
+              <i className="fas fa-fw fa-cloud-upload-alt"></i>
+              <span>Upload Video</span>
+           </Link>
+        </li>
+        
+        <li className="nav-item">
+           <Link className="nav-link" to="history-page.html">
+              <i className="fas fa-fw fa-history"></i>
               <span>History Page</span>
            </Link>
         </li>
         <li className="nav-item dropdown">
            <Link className="nav-link dropdown-toggle" to="categories.html" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-               <FaList/>
+              <i className="fas fa-fw fa-list-alt"></i>
               <span>Categories</span>
            </Link>
            <div className="dropdown-menu">
@@ -67,4 +72,4 @@ const Sidebar = () => {
 
 }
 
-export default Sidebar
+export default EduSidebar

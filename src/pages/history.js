@@ -37,7 +37,8 @@ export default class componentName extends Component {
                               <div class="time">3:50</div>
                            </div>
                            <div class="progress">
-                              <div class="progress-bar" role="progressbar" style={{width: "50%;"}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
+                              <div class="progress-bar" role="progressbar" style={{width:'50%;'}}  aria-valuenow = '50'   aria-valuemin ='0' aria-valuemax="100">1:40
+                              </div>
                            </div>
                            <div class="video-card-body">
                               <div class="video-title">
@@ -61,7 +62,7 @@ export default class componentName extends Component {
                               <div class="time">3:50</div>
                            </div>
                            <div class="progress">
-                              <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
+                              <div class="progress-bar" role="progressbar" style={{width:'50%;'}} aria-valuenow ="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
                            </div>
                            <div class="video-card-body">
                               <div class="video-title">
@@ -85,7 +86,7 @@ export default class componentName extends Component {
                               <div class="time">3:50</div>
                            </div>
                            <div class="progress">
-                              <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
+                              <div class="progress-bar" role="progressbar" style={{width:'50%;'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
                            </div>
                            <div class="video-card-body">
                               <div class="video-title">
@@ -109,7 +110,7 @@ export default class componentName extends Component {
                               <div class="time">3:50</div>
                            </div>
                            <div class="progress">
-                              <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
+                              <div class="progress-bar" role="progressbar" style={{width:'50%;'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
                            </div>
                            <div class="video-card-body">
                               <div class="video-title">
@@ -133,7 +134,7 @@ export default class componentName extends Component {
                               <div class="time">3:50</div>
                            </div>
                            <div class="progress">
-                              <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
+                              <div class="progress-bar" role="progressbar" style={{width:'50%;'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
                            </div>
                            <div class="video-card-body">
                               <div class="video-title">
@@ -157,7 +158,7 @@ export default class componentName extends Component {
                               <div class="time">3:50</div>
                            </div>
                            <div class="progress">
-                              <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
+                              <div class="progress-bar" role="progressbar" style={{width:'50%;'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
                            </div>
                            <div class="video-card-body">
                               <div class="video-title">
@@ -181,7 +182,7 @@ export default class componentName extends Component {
                               <div class="time">3:50</div>
                            </div>
                            <div class="progress">
-                              <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
+                              <div class="progress-bar" role="progressbar" style={{width:'50%;'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
                            </div>
                            <div class="video-card-body">
                               <div class="video-title">
@@ -205,7 +206,7 @@ export default class componentName extends Component {
                               <div class="time">3:50</div>
                            </div>
                            <div class="progress">
-                              <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
+                              <div class="progress-bar" role="progressbar" style={{width:'50%;'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
                            </div>
                            <div class="video-card-body">
                               <div class="video-title">
@@ -229,7 +230,7 @@ export default class componentName extends Component {
                               <div class="time">3:50</div>
                            </div>
                            <div class="progress">
-                              <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
+                              <div class="progress-bar" role="progressbar" style={{width:'50%;'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
                            </div>
                            <div class="video-card-body">
                               <div class="video-title">
@@ -253,7 +254,7 @@ export default class componentName extends Component {
                               <div class="time">3:50</div>
                            </div>
                            <div class="progress">
-                              <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
+                              <div class="progress-bar" role="progressbar" style={{width:'50%;'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
                            </div>
                            <div class="video-card-body">
                               <div class="video-title">
@@ -277,7 +278,7 @@ export default class componentName extends Component {
                               <div class="time">3:50</div>
                            </div>
                            <div class="progress">
-                              <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
+                              <div class="progress-bar" role="progressbar" style={{width:'50%;'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
                            </div>
                            <div class="video-card-body">
                               <div class="video-title">
@@ -301,7 +302,7 @@ export default class componentName extends Component {
                               <div class="time">3:50</div>
                            </div>
                            <div class="progress">
-                              <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
+                              <div class="progress-bar" role="progressbar" style={{width:'50%;'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1:40</div>
                            </div>
                            <div class="video-card-body">
                               <div class="video-title">

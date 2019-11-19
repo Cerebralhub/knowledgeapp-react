@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const Landbar = () => {
 return (
@@ -30,7 +31,7 @@ return (
                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Terms and Condition</a>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn btn-outline-secondary rounded">Sign In</button>
+                <button type="button" class="btn btn-outline-secondary rounded"><Link to = "/Register">Sign In</Link></button>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

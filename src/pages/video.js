@@ -68,7 +68,7 @@ export default class componentName extends Component {
                                           <a className="dropdown-item" href="#"><i className="fas fa-fw fa-times-circle"></i> &nbsp; Close</a>
                                        </div>
                                     </div>
-                                    <h6>Up Next</h6>
+                                    <h6>Suggested Lessons</h6>
                                  </div>
                               </div>
                               <div className="col-md-12">

@@ -15,7 +15,7 @@ export default class componentName extends Component {
                     <h1 className="welcome">Welcome to <br/> Knowledge App!</h1>
                     <div className="row">
                         <div className="col-sm-4">
-                            <button type="button" className="btn btn-outline-secondary rounded">Sign Up to Continue </button>
+                            <button type="button" className="btn btn-outline-secondary rounded"><Link to="/Login">Sign Up to Continue</Link></button>
                         </div>
                     </div>
                 </div>
