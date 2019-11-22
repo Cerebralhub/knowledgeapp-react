@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaBars,FaSearch,FaPlusCircle,FaUserCircle,FaSignoutalt,FaCog,FaVideo} from 'react-icons/fa';
+import {FaBars,FaSearch,FaPlusCircle,FaUserCircle,FaSignoutAlt,FaCog,FaVideo} from 'react-icons/fa';
 const Navbar = () => {
 return (
    <>

@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom'
 import Navbar from '../layout/Navbar';
 import Footer from '../layout/Footer';
 import Sidebar from '../layout/Sidebar';
+import {FaSearch,FaStar,FaSignal,FaTimesCircle,} from 'react-icons/fa';
+// import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+
 export default class componentName extends Component {
     render() {
       return (
@@ -18,7 +23,7 @@ export default class componentName extends Component {
                         <div class="input-group">
                            <input type="text" placeholder="Search for..." class="form-control"/>
                            <div class="input-group-append">
-                              <button type="button" class="btn btn-dark"><i class="fas fa-search"></i></button>
+                              <button type="button" class="btn btn-dark"> <FaSearch/></button>
                            </div>
                         </div>
                      </form>
@@ -35,9 +40,9 @@ export default class componentName extends Component {
                               <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                            </a>
                            <div class="dropdown-menu dropdown-menu-right">
-                              <a class="dropdown-item" href="#"><i class="fas fa-fw fa-star"></i> &nbsp; Top Rated</a>
-                              <a class="dropdown-item" href="#"><i class="fas fa-fw fa-signal"></i> &nbsp; Viewed</a>
-                              <a class="dropdown-item" href="#"><i class="fas fa-fw fa-times-circle"></i> &nbsp;
+                              <a class="dropdown-item" href="#"> <FaStar/> &nbsp; Top Rated</a>
+                              <a class="dropdown-item" href="#"> <FaSignal/> &nbsp; Viewed</a>
+                              <a class="dropdown-item" href="#"> <FaTimesCircle/> &nbsp;
                                  Close</a>
                            </div>
                         </div>
@@ -457,10 +462,10 @@ export default class componentName extends Component {
                   </div>
                </div>
             </div>
-    <Footer/>
     </div>
     </div>
-    </div>
+ <Footer/>
+ </div>
   
   
     )

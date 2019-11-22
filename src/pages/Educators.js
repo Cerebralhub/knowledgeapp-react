@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import Navbar from '../layout/Navbar';
+import Footer from '../layout/Footer';
 import { Link } from 'react-router-dom'
-
+import {FaSearch,FaSignal,FaListAlt,FaTimesCircle,FaPlayCircle,FaCalendarAlt,FaAngleUp} from 'react-icons/fa';
  class Educators extends Component {
   render() {
     return (
       <div>
        <Navbar />
-      
         <div id="content-wrapper">
           <div className="container-fluid pb-0">
             <div className="top-mobile-search">
@@ -17,7 +17,7 @@ import { Link } from 'react-router-dom'
                     <div className="input-group">
                       <input type="text" placeholder="Search for..." className="form-control" />
                       <div className="input-group-append">
-                        <button type="button" className="btn btn-dark"><i className="fas fa-search" /></button>
+                        <button type="button" className="btn btn-dark"><FaSearch/></button>
                       </div>
                     </div>
                   </form>
@@ -34,15 +34,15 @@ import { Link } from 'react-router-dom'
                         Sort by <i className="fa fa-caret-down" aria-hidden="true" />
                       </Link>
                       <div className="dropdown-menu dropdown-menu-right">
-                        <Link className="dropdown-item" to="#"><i className="fas fa-fw fa-star" />
+                        <Link className="dropdown-item" to="#"><FaListAlt/>
                           &nbsp;Category</Link>
-                        <Link className="dropdown-item" to="#"><i className="fas fa-fw fa-signal" /> &nbsp;
+                        <Link className="dropdown-item" to="#"><FaSignal/> &nbsp;
                           Topic</Link>
-                        <Link className="dropdown-item" to="#"><i className="fas fa-fw fa-times-circle" /> &nbsp;
+                        <Link className="dropdown-item" to="#"><FaTimesCircle/> &nbsp;
                           Close</Link>
                       </div>
                     </div>
-                    <h6>Featured Videos</h6>
+                    <h6>Cerebral Originals</h6>
                   </div>
                 </div>
                 <div className="col-xl-3 col-sm-6 mb-3">
@@ -168,7 +168,7 @@ import { Link } from 'react-router-dom'
                 <div className="col-xl-3 col-sm-6 mb-3">
                   <div className="video-card">
                     <div className="video-card-image">
-                      <Link className="play-icon" to="#"><i className="fas fa-play-circle" /></Link>
+                      <Link className="play-icon" to="#"><FaPlayCircle/></Link>
                       <Link to="#"><img className="img-fluid" src="img/v7.png" alt="" /></Link>
                       <div className="time">3:50</div>
                     </div>
@@ -180,7 +180,7 @@ import { Link } from 'react-router-dom'
                         Education <Link title data-placement="top" data-toggle="tooltip" to="#" data-original-title="Verified"><i className="fas fa-check-circle text-success" /></Link>
                       </div>
                       <div className="video-view">
-                        1.8M views &nbsp;<i className="fas fa-calendar-alt" /> 11 Months ago
+                        1.8M views &nbsp;<FaCalendarAlt/> 11 Months ago
                       </div>
                     </div>
                   </div>
@@ -188,7 +188,7 @@ import { Link } from 'react-router-dom'
                 <div className="col-xl-3 col-sm-6 mb-3">
                   <div className="video-card">
                     <div className="video-card-image">
-                      <Link className="play-icon" to="#"><i className="fas fa-play-circle" /></Link>
+                      <Link className="play-icon" to="#"><FaPlayCircle/></Link>
                       <Link to="#"><img className="img-fluid" src="img/v8.png" alt="" /></Link>
                       <div className="time">3:50</div>
                     </div>
@@ -219,38 +219,13 @@ import { Link } from 'react-router-dom'
                 </ul>
               </nav>
             </section>
-            {/* /.container-fluid */}
-            {/* Sticky Footer */}
-            <footer className="sticky-footer">
-              <div className="container">
-                <div className="row no-gutters">
-                  <div className="col-lg-6 col-sm-6">
-                    <p>
-                      Copyright ©
-                      All Rights Reserved | Knowledge App
-                    </p>
-                  </div>
-                  <div className="col-lg-6 col-sm-6 text-right">
-                    <div className="app">
-                      <Link to="#"><img alt="" src="img/google.png" /></Link>
-                      <Link to="#"><img alt="" src="img/apple.png" /></Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </footer>
+            <Footer/>
           </div>
-          {/* /.content-wrapper */}
         </div>
         {/* /#wrapper */}
-        {/* Scroll to Top Button*/}
         <Link className="scroll-to-top rounded" to="#page-top">
-          <i className="fas fa-angle-up" />
+        <FaAngleUp/>
         </Link>
-        {/* Bootstrap core JavaScript*/}
-        {/* Core plugin JavaScript*/}
-        {/* Owl Carousel */}
-        {/* Custom scripts for all pages*/}
       </div>
       
     )

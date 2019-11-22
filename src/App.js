@@ -17,6 +17,8 @@ import Channels from './pages/Channels';
 import ForgetPassword from './pages/ForgetPassword';
 import Educators from './pages/Educators';
 
+
+
 function App() {
   return (
     <Router>
@@ -32,7 +34,7 @@ function App() {
          <Landing/>
     </Route>
     <Route path="/index">
-         <Index/>
+         <Index />
     </Route>
     <Route path="/video">
          <Video/>
