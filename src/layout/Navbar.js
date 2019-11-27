@@ -1,21 +1,29 @@
 import React from 'react';
-import {FaBars,FaSearch,FaPlusCircle,FaUserCircle,FaSignoutalt,FaCog,FaVideo} from 'react-icons/fa';
+import { FaBars, FaSearch, FaPlusCircle, FaUserCircle, /*FaSignoutalt,*/ FaCog, FaVideo,   } from 'react-icons/fa';
+import { Link } from 'react-router-dom'
+
+
+
+
+
+
+
 const Navbar = () => {
 return (
    <>
       <nav className="navbar navbar-expand navbar-light bg-white static-top osahan-nav sticky-top">
       &nbsp;&nbsp;
       <button className="btn btn-link btn-sm text-secondary order-1 order-sm-0" id="sidebarToggle">
-      <FaBars/>
+      <FaBars />
       </button> &nbsp;&nbsp;
-      <a className="navbar-brand mr-1" href="index.html"><img className="img-fluid" alt="" src=""/>Knowledge App</a>
+      <Link className="navbar-brand mr-1" href="/Landing"><img className="img-fluid" alt="" src=""/>Knowledge App</Link>
 
       <form className="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-5 my-2 my-md-0 osahan-navbar-search">
          <div className="input-group">
             <input type="text" className="form-control" placeholder="Search for..."/>
             <div className="input-group-append">
                <button className="btn btn-light" type="button">
-               <FaSearch/>
+               <FaSearch />
                </button>
             </div>
          </div>

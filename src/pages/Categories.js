@@ -3,13 +3,13 @@ import Sidebar from '../layout/Sidebar';
 import Navbar from '../layout/Navbar';
 import { Link } from 'react-router-dom';
 import { CatImg1 } from '../img/s1.png';
-import { CatImg2 } from '../img/s2.png';
+/*import { CatImg2 } from '../img/s2.png';
 import { CatImg3 } from '../img/s3.png';
 import { CatImg4 } from '../img/s4.png';
 import { CatImg5 } from '../img/s5.png';
 import { CatImg6 } from '../img/s6.png';
 import { CatImg7 } from '../img/s7.png';
-import { CatImg8 } from '../img/s8.png';
+import { CatImg8 } from '../img/s8.png';*/
 
  class Categories extends Component {
   render() {
