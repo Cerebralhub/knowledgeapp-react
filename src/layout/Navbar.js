@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { FaBars, FaSearch, FaPlusCircle, FaUserCircle, /*FaSignoutalt,*/ FaCog, FaVideo,   } from 'react-icons/fa';
 import { Link } from 'react-router-dom'
 
@@ -8,6 +9,9 @@ import { Link } from 'react-router-dom'
 
 
 
+=======
+import {FaBars,FaSearch,FaPlusCircle,FaUserCircle,FaSignoutAlt,FaCog,FaVideo} from 'react-icons/fa';
+>>>>>>> cea9e35bd7b76b98e95c972b0c60ae328505cd44
 const Navbar = () => {
 return (
    <>
